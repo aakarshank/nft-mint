@@ -710,10 +710,10 @@ export default function Home(){
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>Welcome to the Home Page!</h1>
-            <button onClick={connectWallet} id="connectWalletButton">Connect Your Wallet</button><br /><br />
-            <button onClick={checkConnection}>View Marketplace</button>
+            <button className="btn" onClick={connectWallet} id="connectWalletButton">Connect Your Wallet</button><br /><br />
+            <button className="btn" onClick={checkConnection}>View Marketplace</button>
         </div>
     )
 }

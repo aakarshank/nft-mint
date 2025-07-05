@@ -42,20 +42,20 @@ export default function UserPage(){
     },[])
 
     return (
-        <div>
+        <div className="container">
             <h1> Your NFTS!
             </h1>
             {userNFTs.map((nft)=>(
-                <div>
+                <div className="nft-card">
                     <h1>{nft.name}</h1>
-                    {nft.imageURI && <img src={nft.imageURI} alt={nft.name} style={{ width: "300px" }} />}
+                    {nft.imageURI && <img className="nft-image" src={nft.imageURI} alt={nft.name} />}
                     <h1>Price: {(nft.price).toString()} ETH</h1>
 
                 </div>
             ))}
-            <button onClick={()=>{navigate("/create-nft")}}>Create an NFT</button><br />
-            <button onClick={()=>{navigate("/")}}>Navigate back to Home</button><br />
-            <button onClick={()=>{navigate("/marketplace")}}>View all NFTs</button>
+            <button className="btn" onClick={()=>{navigate("/create-nft")}}>Create an NFT</button><br />
+            <button className="btn" onClick={()=>{navigate("/")}}>Navigate back to Home</button><br />
+            <button className="btn" onClick={()=>{navigate("/marketplace")}}>View all NFTs</button>
         </div>
     )
 }
