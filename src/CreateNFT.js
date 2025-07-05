@@ -101,7 +101,7 @@ export default function CreateNFT(){
         
     }
     return (
-        <div>
+        <div className="container">
             <h1>
                 Create an NFT
             </h1>
@@ -111,7 +111,7 @@ export default function CreateNFT(){
             <input type="number" placeholder="enter NFT price here..." onChange={(e)=>{setPrice(parseInt(e.target.value))}} /><br />
             <h4>Upload an Image: </h4>
             <input type="file" id="img" name="img" accept="image/*" onChange={(e)=>{setImage(e.target.files[0])}} /><br /><br />
-            <button onClick={createNFT}>Create NFT</button>
+            <button className="btn" onClick={createNFT}>Create NFT</button>
 
 
         </div>
